@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+    <head>
+        <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+        <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+        <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+        <title>Conarec 2019</title>
+
+        <!-- The title tag shows in email notifications, like Android 4.4. -->
+        <!-- Web Font / @font-face : BEGIN -->
+        <!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. -->
+        <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+        <!--[if mso]>
+            <style>
+                * {
+                    font-family: sans-serif !important;
+                }
+            </style>
+        <![endif]-->
+        <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+        <!--[if !mso]><!-->
+            <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+        <!--<![endif]-->
+        <!-- Web Font / @font-face : END -->
+        <!-- CSS Reset : BEGIN -->
+        <style>
+            /* What it does: Remove spaces around the email design added by some email clients. */
+            /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+            html,
+            body {
+                margin: 0 auto !important;
+                padding: 0 !important;
+                height: 100% !important;
+                width: 100% !important;
+            }
+            /* What it does: Stops email clients resizing small text. */
+            * {
+                -ms-text-size-adjust: 100%;
+                -webkit-text-size-adjust: 100%;
+            }
+            /* What it does: Centers email on Android 4.4 */
+            div[style*="margin: 16px 0"] {
+                margin: 0 !important;
+            }
+            /* What it does: Stops Outlook from adding extra spacing to tables. */
+            table,
+            td {
+                mso-table-lspace: 0pt !important;
+                mso-table-rspace: 0pt !important;
+            }
+            /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+            table {
+                border-spacing: 0 !important;
+                border-collapse: collapse !important;
+                table-layout: fixed !important;
+                margin: 0 auto !important;
+            }
+            table table table {
+                table-layout: auto;
+            }
+            /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+            a {
+                text-decoration: none;
+            }
+            /* What it does: Uses a better rendering method when resizing images in IE. */
+            img {
+                -ms-interpolation-mode:bicubic;
+            }
+            /* What it does: A work-around for email clients meddling in triggered links. */
+            *[x-apple-data-detectors],  /* iOS */
+            .unstyle-auto-detected-links *,
+            .aBn {
+                border-bottom: 0 !important;
+                cursor: default !important;
+                color: inherit !important;
+                text-decoration: none !important;
+                font-size: inherit !important;
+                font-family: inherit !important;
+                font-weight: inherit !important;
+                line-height: inherit !important;
+            }
+            /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+            .a6S {
+                display: none !important;
+                opacity: 0.01 !important;
+            }
+            /* If the above doesn't work, add a .g-img class to any image in question. */
+            img.g-img + div {
+                display: none !important;
+            }
+            /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+            /* Create one of these media queries for each additional viewport size you'd like to fix */
+            /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+            @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+                .email-container {
+                    min-width: 320px !important;
+                }
+            }
+            /* iPhone 6, 6S, 7, 8, and X */
+            @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+                .email-container {
+                    min-width: 375px !important;
+                }
+            }
+            /* iPhone 6+, 7+, and 8+ */
+            @media only screen and (min-device-width: 414px) {
+                .email-container {
+                    min-width: 414px !important;
+                }
+            }
+        </style>
+        <!-- CSS Reset : END -->
+        <!-- Reset list spacing because Outlook ignores much of our inline CSS. -->
+        <!--[if mso]>
+            <style type="text/css">
+                ul,
+                ol {
+                    margin: 0 !important;
+                }
+                li {
+                    margin-left: 30px !important;
+                }
+                li.list-item-first {
+                    margin-top: 0 !important;
+                }
+                li.list-item-last {
+                    margin-bottom: 10px !important;
+                }
+            </style>
+        <![endif]-->
+        <!-- Progressive Enhancements : BEGIN -->
+        <style>
+            /* What it does: Hover styles for buttons */
+            .button-td,
+            .button-a {
+                transition: all 100ms ease-in;
+            }
+            .button-td-primary:hover,
+            .button-a-primary:hover {
+                background: #555555 !important;
+                border-color: #555555 !important;
+            }
+            /* White Line Samsung Mail Fix */
+            #MessageViewBody img,
+            #MessageWebViewDiv img{
+                margin: 0 0 -1px 0!important;
+            }
+            /* Center Stuff Samsung Mail Fix */
+            #MessageViewBody, #MessageWebViewDiv{
+                width: 100% !important;
+                margin: 0 auto !important;
+            }
+            .margin-lft-footer{
+                margin: 0!important;
+            }
+            /* Media Queries */
+            @media screen and (max-width: 600px) {
+                .font-mob{
+                    font-size: 9px !important;
+                    line-height: 12px !important;
+                }
+                .font-text {
+                    font-size: 12px !important;
+                    padding: 0px 0px 5px !important;
+                }
+                .text-mobile {
+                    padding: 5px 40px 5px !important;
+                }
+                .text-footer {
+                    align-items: center !important;
+                    text-align: center !important;
+                }
+                .text-align-mob{
+                    text-align: center!important;
+                }
+                .pad-mob-duo{
+                    padding: 0px 50px 30px 50px !important;
+                }
+                .no-padding-mob{
+                    padding: 0px !important;
+                }
+                .margin-cent-mob{
+                    margin: 10px auto !important;
+                }
+                .padding-text-mob{
+                    padding: 20px 50px !important;
+                }
+                .height-mob-spacer{
+                    height: 30px !important;
+                }
+                .padding-mob{
+                    padding: 20px 30px !important;
+                }
+                .height-padding-mob{
+                    padding: 30px 0 !important;
+                }
+                .center-mob{
+                    text-align: center!important;
+                }
+                .margin-mob{
+                    margin: 0 auto !important;
+                }
+                .text-align-left-mob{text-align: left!important;}
+                .display-mob{
+                    display: block !important;
+                    overflow: visible !important;
+                    width: 100% !important;
+                    max-height: 20px !important;
+                    mso-hide: show !important;
+                    height: 20px !important;
+                    line-height: normal !important;
+                }
+                .hide-mob{
+                    display: none !important;
+                    font-size: 0 !important;
+                    max-height: 0 !important;
+                    line-height: 0 !important;
+                    mso-hide: all !important;
+                    overflow: hidden !important;
+                    visibility: hidden !important;
+                }
+                .email-container {
+                    width: 100% !important;
+                    margin: auto !important;
+                }
+                /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+                .fluid {
+                    max-width: 100% !important;
+                    height: auto !important;
+                    margin-left: auto !important;
+                    margin-right: auto !important;
+                }
+                /* What it does: Forces table cells into full-width rows. */
+                .stack-column-none{display: none;}
+                .stack-column,
+                .stack-column-center {
+                    display: block !important;
+                    width: 100% !important;
+                    max-width: 100% !important;
+                    direction: ltr !important;
+                }
+                .center-paragraph {
+                    max-width: 315px !important;
+                    margin: 0 auto !important;
+                }
+                .stack-column-two {
+                    display: inline-block !important;
+                    width: 50% !important;
+                    max-width: 50% !important;
+                    margin: 0 !important;
+                    direction: ltr !important;
+                }
+                /* And center justify these ones. */
+                .stack-column-center {
+                    text-align: center !important;
+                }
+                .stack-column-two{
+                    text-align: center !important;
+                }
+                /* .center-mobile{
+                    text-align: center !important;
+                } */
+                /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+                .center-on-narrow {
+                    text-align: center !important;
+                    display: block !important;
+                    margin-left: auto !important;
+                    margin-right: auto !important;
+                    float: none !important;
+                }
+                table.center-on-narrow {
+                    display: inline-block !important;
+                }
+                /* What it does: Adjust typography on small screens to improve readability */
+                .email-container p {
+                    font-size: 13px;
+                }
+                .email-container .text-unic{
+                    font-size: 10px !important;
+                }
+                .email-header{
+                    font-size: 9px !important;
+                }
+            }
+       
+        .yahoo-hide {
+            display: none;
+        }
+
+        .yahoo-show {
+            display: block !important;
+        }    
+		
+
+		[owa] .owa-hide {
+			display: none;
+		}
+
+		[owa] .owa-show {
+			display: block !important;
+		}
+
+		@media screen and (max-width:500px) {			
+			.texto-mobile {
+				margin: 10px 8% !important;
+			}
+            .social-mobile {
+                width: 15% !important;
+            }
+		}
+        </style>
+        <!-- Progressive Enhancements : END -->
+        <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+        <!--[if gte mso 9]>
+            <xml>
+                <o:OfficeDocumentSettings>
+                <o:AllowPNG/>
+                <o:PixelsPerInch>96</o:PixelsPerInch>
+                </o:OfficeDocumentSettings>
+            </xml>
+        <![endif]-->
+    </head>
+    <!--
+        The email background color (#e2e2e2) is defined in three places:
+        1. body tag: for most email clients
+        2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
+        3. mso conditional: For Windows 10 Mail
+    -->
+    <body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #e2e2e2;">
+        <center style="width: 100%; background-color: #e2e2e2;">
+            <!--[if mso | IE]>
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #e2e2e2;">
+                <tr>
+                    <td>
+                        <![endif]-->
+                        <!-- Visually Hidden Preheader Text : BEGIN -->
+                        <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+                            Construa o mindset do engajamento, a nova exig&ecirc;ncia do mercado.
+                        </div>
+                        <!-- Visually Hidden Preheader Text : END -->
+                        <!-- Create white space after the desired preview text so email clients don’t pull other distracting text into the inbox preview. Extend as necessary. -->
+                        <!-- Preview Text Spacing Hack : BEGIN -->
+                        <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+                            &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+                            &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+                            &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+                            &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+                            &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+                            &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+                            &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+                            &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+                        </div>
+                        <!-- Preview Text Spacing Hack : END -->
+                        <!-- Email Body : BEGIN -->
+                        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="margin: 0 auto; background-color: #21304f;" class="email-container">
+
+                            <!-- Email Header : BEGIN -->
+                            <tr>
+                                <td style="padding: 20px 0; text-align: center; background-color:#e2e2e2; font-family:Arial;">
+                                    <p align="right" class="email-header" style="font-size: 11px; margin: 0;">
+                                        <a href="#" _label="" _type="" target="_blank" style="color:#7c858f; text-decoration: underline;">Ver Online</a> | 
+                                        <a href="#" _label="" _type="" target="_blank" style="color:#7c858f; text-decoration: underline;">Descadastre-se</a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <!-- Email Header : BEGIN -->
+
+                            <!-- Header : BEGIN -->
+                            <tr>
+                                <td align="center" style=" border: 0 none; border-style: hidden; border-spacing: 0; padding: 0; margin: 0; border-width: 0;">
+                                    <table align="center" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <td align="center" style=" border: 0 none; border-style: hidden; border-spacing: 0; padding: 0; margin: 0; border-width: 0;">
+                                                <a href="#" _label="" target="_blank" title="Conarec 2019" >
+                                                    <img src="images/emkt_inscritos_01.jpg" width="600" height="" alt="Conarec 2019" border="0" style="width: 100%; max-width: 600px; height: auto;  font-family: sans-serif; font-size: 0; line-height: 0; margin: auto; display: block;" class="g-img">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td align="center" style=" border: 0 none; border-style: hidden; border-spacing: 0; padding: 0; margin: 0; border-width: 0;">
+                                                <a href="#" _label="" target="_blank" title="Construa o mindset do engajamento, a nova exig&ecirc;ncia do mercado." >
+                                                    <img src="images/emkt_inscritos_02.jpg" width="600" height="" alt="Construa o mindset do engajamento, a nova exig&ecirc;ncia do mercado." border="0" style="width: 100%; max-width: 600px; height: auto;  font-family: sans-serif; font-size: 0; line-height: 0; margin: auto; display: block;" class="g-img">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- Header : END -->
+
+                            <tr>
+                                <td  height="20" style="background-color: #21304f"></td>
+                            </tr>
+
+                            <!-- Conteudo Texto 1: BEGIN -->
+                            <tr>
+                                <td align="center" style="border: 0 none; border-style: hidden; border-spacing: 0; margin: 0; border-width: 0; text-align: center; background-color: #21304f;">
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <!-- Column : BEGIN -->
+                                            <td align="center" class="" style="border: 0 none; border-style: hidden; border-spacing: 0; border-width: 0; font-family: Verdana; font-size:15px; line-height: 18px; text-align: center; padding: 0; margin: 0; color: #ffffff !important; background-color: #21304f">
+                                                <p align="center" style="border: 0 none; border-style: hidden; border-spacing: 0; margin: 0; border-width: 0; padding: 0; margin: 0 10%; margin-top: 8px;" class="texto-mobile">
+                                                    O <span style="font-weight: bold; color: #bbf41c;">CONAREC 2019</span>, maior congresso de intelig&ecirc;ncia relacional e de comportamento do consumidor do mundo, vai provocar insights estrat&eacute;gicos e reflex&otilde;es transformadoras sobre o engajamento do p&oacute;s-consumidor.
+                                                </p>
+                                            </td>
+                                            <!-- Column : END -->
+                                        </tr>
+
+                                        <tr>
+                                            <td  height="20" style="background-color: #21304f"></td>
+                                        </tr>
+
+                                        <tr>
+                                            <!-- Column : BEGIN -->
+                                            <td align="center" class="" style="border: 0 none; border-style: hidden; border-spacing: 0; border-width: 0; font-family: Verdana; font-size:15px; line-height: 18px; text-align: center; padding: 0; margin: 0; color: #ffffff !important; background-color: #21304f">
+                                                <p align="center" style="border: 0 none; border-style: hidden; border-spacing: 0; margin: 0; border-width: 0; padding: 0; margin: 0 10%; margin-top: 8px;" class="texto-mobile">
+                                                    Com o tema <span style="font-weight: bold;">"Expandindo as fronteiras do engajamento"</span>, o principal encontro de executivos C-level e de decisores do Pa&iacute;s vai debater as pr&aacute;ticas inovadoras para engajar esse cliente exigente e inquieto que est&aacute; dominando o mercado.
+                                                </p>
+                                            </td>
+                                            <!-- Column : END -->
+                                        </tr>
+
+                                        <tr>
+                                            <td  height="20" style="background-color: #21304f"></td>
+                                        </tr>
+
+                                        <tr>
+                                            <!-- Column : BEGIN -->
+                                            <td align="center" class="" style="border: 0 none; border-style: hidden; border-spacing: 0; border-width: 0; font-family: Verdana; font-size:15px; line-height: 18px; text-align: center; padding: 0; margin: 0; color: #ffffff !important; background-color: #21304f">
+                                                <p align="center" style="border: 0 none; border-style: hidden; border-spacing: 0; margin: 0; border-width: 0; padding: 0; margin: 0 10%; margin-top: 8px;" class="texto-mobile">
+                                                    Participe do <span style="font-weight: bold; color: #bbf41c;">CONAREC 2019</span> e incorpore a defesa da sua causa e a identifica&ccedil;&atilde;o dos seus clientes na intelig&ecirc;ncia relacional praticada pela sua empresa. Saia na frente dos players concorrentes e lance o <span style="font-weight: bold;">mindset do engajamento</span> nesse mercado que ainda n&atilde;o integrou essa pr&aacute;tica.
+                                                </p>
+                                            </td>
+                                            <!-- Column : END -->
+                                        </tr>
+                                    </table>                                    
+                                </td>
+                            </tr>
+                            <!-- Conteudo Texto 1: END -->
+
+                            <tr>
+                                <td  height="50" style="background-color: #21304f"></td>
+                            </tr>
+
+                            <!-- Compre agora : BEGIN -->
+                            <tr>
+                                <td align="center" style=" border: 0 none; border-style: hidden; border-spacing: 0; padding: 0; margin: 0; border-width: 0;">
+                                    <table align="center" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <!-- Column : BEGIN -->
+                                            <td align="center" style=" border: 0 none; border-style: hidden; border-spacing: 0; padding: 0; margin: 0; border-width: 0; background-color: #21304f">
+                                                <a href="#" _label="" target="_blank" title="Compre agora" >
+                                                    <img src="images/emkt_inscritos_05.jpg" width="202" height="" alt="Compre agora" border="0" style="width: 100%; max-width: 202px; height: auto;  font-family: sans-serif; font-size: 0; line-height: 0; margin: auto; display: block;" class="g-img">
+                                                </a>
+                                            </td>
+                                            <!-- Column : END -->                                            
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- Compre agora : END -->
+
+                            <tr>
+                                <td  height="30" style="background-color: #21304f"></td>
+                            </tr>
+
+                            <!-- Conteudo Texto 2: BEGIN -->
+                            <tr>
+                                <td align="center"
+                                    style="border: 0 none; border-style: hidden; border-spacing: 0; margin: 0; border-width: 0; text-align: center; background-color: #21304f;">
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <!-- Column : BEGIN -->
+                                            <td align="center" class="" style="border: 0 none; border-style: hidden; border-spacing: 0; border-width: 0; font-family: Verdana; font-size:14px; font-weight: bold; line-height: 18px; text-align: center; padding: 0; margin: 0; color: #bbf41c !important; background-color: #21304f">
+                                                <p align="center" style="border: 0 none; border-style: hidden; border-spacing: 0; margin: 0; border-width: 0; padding: 0; margin: 0 10%; margin-top: 8px;" class="texto-mobile">
+                                                    CONAREC 2019<br>Expandindo as fronteiras do engajamento.<br>10 e 11 de setembro
+                                                </p>
+                                            </td>
+                                            <!-- Column : END -->
+                                        </tr>
+                                    </table>                                    
+                                </td>
+                            </tr>
+                            <!-- Conteudo Texto 2: END -->
+
+                            <tr>
+                                <td  height="40" style="background-color: #21304f"></td>
+                            </tr>
+
+                            <!-- Traço 1: BEGIN -->
+                            <tr>
+                                <td align="center" style="border: 0 none; border-style: hidden; border-spacing: 0; margin: 0; border-width: 0; text-align: center; background-color: #21304f;">
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <!-- Column : BEGIN -->
+                                            <td width="30%" align="center" style=" border: 0 none; border-style: hidden; border-spacing: 0; padding: 0; margin: 0; border-width: 0; background-color: #21304f">
+                                            
+                                            </td>
+                                            <!-- Column : END -->
+                                            <!-- Column : BEGIN -->
+                                            <td width="20%" align="center" style=" border: 0 none; border-style: hidden; border-spacing: 0; padding: 0; margin: 0; border-width: 0; background-color: #21304f">                                                
+                                                <img src="images/emkt_inscritos_09.jpg" width="112" height="" alt="" border="0" style="width: 100%; max-width: 112px; height: auto;  font-family: sans-serif; font-size: 0; line-height: 0; margin: auto; display: block;" class="g-img">
+                                            </td>
+                                            <!-- Column : END -->                                        
+                                            <!-- Column : BEGIN -->
+                                            <td width="30%" align="center" style=" border: 0 none; border-style: hidden; border-spacing: 0; padding: 0; margin: 0; border-width: 0; background-color: #21304f">
+                                            
+                                            </td>
+                                            <!-- Column : END -->
+                                        </tr>
+                                    </table>                                    
+                                </td>
+                            </tr>
+                            <!-- Traço 1: END -->
+                            <tr>
+                                <td  height="20" style="background-color: #21304f"></td>
+                            </tr>
+
+                            <!-- Conteudo Texto 3: BEGIN -->
+                            <tr>
+                                <td align="center"
+                                    style="border: 0 none; border-style: hidden; border-spacing: 0; margin: 0; border-width: 0; text-align: center; background-color: #21304f;">
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <!-- Column : BEGIN -->
+                                            <td align="center" class="" style="border: 0 none; border-style: hidden; border-spacing: 0; border-width: 0; font-family: Verdana; font-size:15px; line-height: 18px; text-align: center; padding: 0; margin: 0; color: #ffffff !important; background-color: #21304f">
+                                                <p align="center" style="border: 0 none; border-style: hidden; border-spacing: 0; margin: 0; border-width: 0; padding: 0; margin: 0 10%; margin-top: 8px;" class="texto-mobile">
+                                                    Para mais informa&ccedil;&otilde;es, entre em contato pelo e-mail eventos@gpadrao.com.br ou ligue para (11) 3125-2215
+                                                </p>
+                                            </td>
+                                            <!-- Column : END -->
+                                        </tr>
+                                    </table>                                    
+                                </td>
+                            </tr>
+                            <!-- Conteudo Texto 3: END -->
+
+                            <tr>
+                                <td  height="20" style="background-color: #21304f"></td>
+                            </tr>
+
+                            <!-- Traço 2: BEGIN -->
+                            <tr>
+                                <td align="center" style="border: 0 none; border-style: hidden; border-spacing: 0; margin: 0; border-width: 0; text-align: center; background-color: #21304f;">
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <!-- Column : BEGIN -->
+                                            <td align="center" style=" border: 0 none; border-style: hidden; border-spacing: 0; padding: 0; margin: 0; border-width: 0; background-color: #21304f">                                                
+                                                <img src="images/emkt_inscritos_12.jpg" width="600" height="" alt="" border="0" style="width: 100%; max-width: 600px; height: auto;  font-family: sans-serif; font-size: 0; line-height: 0; margin: auto; display: block;" class="g-img">
+                                            </td>
+                                            <!-- Column : END --> 
+                                        </tr>
+                                    </table>                                    
+                                </td>
+                            </tr>
+                            <!-- Traço 2: END -->
+
+                            <tr>
+                                <td  height="20" style="background-color: #21304f"></td>
+                            </tr>
+
+                            <!-- Website: BEGIN -->
+                            <tr>
+                                <td align="center" style="border: 0 none; border-style: hidden; border-spacing: 0; margin: 0; border-width: 0; text-align: center; background-color: #21304f;">
+                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>                                           
+                                            <!-- Column : BEGIN -->
+                                            <td align="center" style=" border: 0 none; border-style: hidden; border-spacing: 0; padding: 0; margin: 0; border-width: 0; background-color: #21304f">
+                                                <a href="#" _label="" target="_blank" title="www.conarec.com.br">
+                                                    <img src="images/emkt_inscritos_15.jpg" width="204" height="" alt="www.conarec.com.br" border="0" style="width: 100%; max-width: 204px; height: auto; font-family: sans-serif; font-size: 0; line-height: 0; margin: auto; display: block;" class="g-img">
+                                                </a>
+                                            </td>
+                                            <!-- Column : END -->
+                                        </tr>
+                                    </table>                                    
+                                </td>
+                            </tr>
+                            <!-- Website: END -->
+
+                            <tr>
+                                <td  height="20" style="background-color: #21304f"></td>
+                            </tr>
+
+                            <!-- Social Media: BEGIN -->
+                            <tr>
+                                <td valign="top" style="background-color: #21304f;">
+                                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                        <tr>
+                                            <!-- Column : BEGIN -->
+                                            <td class="social-mobile" width="32%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                                    <tr>
+                                                        <td style="text-align: center">
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <!-- Column : END -->
+                                            <!-- Column : BEGIN -->
+                                            <td class="" width="9%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                                    <tr>
+                                                        <td style="text-align: center">
+                                                            <a href="#" _label="" target="_blank" title="Facebook">
+                                                                <img src="images/facebook.jpg" width="40" height="" alt="Facebook" border="0" class="fluid"
+                                                                    style="height: auto;  font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <!-- Column : END -->
+                                            <!-- Column : BEGIN -->
+                                            <td class="" width="9%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                                    <tr>
+                                                        <td style="text-align: center">
+                                                            <a href="#" _label="" target="_blank" title="Twitter">
+                                                                <img src="images/twitter.jpg" width="40" height="" alt="Twitter" border="0" class="fluid" style="height: auto;  font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <!-- Column : END -->
+                                            <!-- Column : BEGIN -->
+                                            <td class="" width="9%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                                    <tr>
+                                                        <td style="text-align: center">
+                                                            <a href="#" _label="" target="_blank" title="Instagram">
+                                                                <img src="images/instagram.jpg" width="40" height="" alt="Youtube" border="0" class="fluid"
+                                                                    style="height: auto; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <!-- Column : END -->
+                                            <!-- Column : BEGIN -->
+                                            <td class="" width="9%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                                    <tr>
+                                                        <td style="text-align: center">
+                                                            <a href="#" _label="" target="_blank" title="Youtube">
+                                                                <img src="images/youtube.jpg" width="40" height="" alt="LinkedIn" border="0" class="fluid"
+                                                                    style="height: auto;  font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <!-- Column : END -->
+                                            <!-- Column : BEGIN -->
+                                            <td class="social-mobile" width="32%">
+                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                                                    <tr>
+                                                        <td style="text-align: center">
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <!-- Column : END -->
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- Social Media : END -->
+                            <tr>
+                                <td  height="20" style="background-color: #21304f"></td>
+                            </tr>
+                            
+                            <!-- Footer : BEGIN  -->
+                            <tr>
+                                <td align="center" style="background-color: #21304f; padding: 10px 7px 20px; font-family: sans-serif; color: #ffffff; margin: 0; font-size: 13px; line-height: 16px;">                                    
+                                    <p align="center" style="width:80%; font-family: sans-serif; color: #ffffff; margin: 0; font-size: 11px; line-height: 16px; padding: 0px">
+                                        Enviado por Grupo Padr&atilde;o&#13;&#10;<br>
+                                        AV. Pacaembu, 1.613 &ndash; Pacaembu | S&atilde;o Paulo - SP | CEP: 01234-001 | +55 11 31252244
+                                    </p>
+                                    
+                                </td>
+                            </tr>
+                            <!-- Footer : END  -->
+                        </table>
+                        <!--[if mso | IE]>
+                    </td>
+                </tr>
+            </table>
+            <![endif]-->
+        </center>
+    </body>
+</html>
