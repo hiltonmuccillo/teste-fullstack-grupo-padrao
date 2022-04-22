@@ -12,7 +12,7 @@ Landing Page desenvolvida com base em arquivo PSD. A página web é responsiva s
 
 <strong>Sobre o Sistema de Cadastro</strong><br><br>
 
-Este sistema desenvolvido em Php, Msqli e PDO efetua tanto uma inclusão, como uma edição ou uma exclusão de pessoas que são exibidas em sua home.<br>
+Este sistema desenvolvido em Php, Mysqli e PDO efetua tanto uma inclusão, como uma edição ou uma exclusão de pessoas que são exibidas em sua home.<br>
 
 É necessário utilizar login e senha para ter acesso ao sistema.<br>
 
